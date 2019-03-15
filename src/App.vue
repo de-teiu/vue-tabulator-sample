@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import TabulatorSample from "./components/TabulatorSample.vue";
+import TabulatorSample from "./components/TabulatorSample3.vue";
 
 export default {
   name: "app",

@@ -16,7 +16,11 @@ export default {
       tabulatorObject: null,
       /** カラム定義 */
       columns: [
-        { title: "Name", field: "name", editor: "input" },
+        {
+          title: "Name",
+          field: "name",
+          editor: "input"
+        },
         {
           title: "Task Progress",
           field: "progress",
@@ -29,7 +33,10 @@ export default {
           field: "gender",
           width: 95,
           editor: "select",
-          editorParams: { Male: "male", Female: "female" }
+          editorParams: {
+            Male: "male",
+            Female: "female"
+          }
         },
         {
           title: "Rating",
@@ -39,7 +46,12 @@ export default {
           width: 100,
           editor: true
         },
-        { title: "Color", field: "col", width: 130, editor: "input" },
+        {
+          title: "Color",
+          field: "col",
+          width: 130,
+          editor: "input"
+        },
         {
           title: "Date Of Birth",
           field: "dob",
