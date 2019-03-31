@@ -1,0 +1,49 @@
+[{
+    "title": "A",
+    "field": "A",
+    "width": 60,
+    "align": "center",
+    "headerSort": false
+}, {
+    "title": "B",
+    "field": "B",
+    "width": 60,
+    "align": "center",
+    "headerSort": false
+}, {
+    "title": "C",
+    "field": "C",
+    "width": 60,
+    "align": "center",
+    "headerSort": false
+}, {
+    "title": "D",
+    "field": "D",
+    "width": 60,
+    "align": "center",
+    "headerSort": false
+}, {
+    "title": "E",
+    "field": "E",
+    "width": 60,
+    "align": "center",
+    "headerSort": false
+}, {
+    "title": "F",
+    "field": "F",
+    "width": 60,
+    "align": "center",
+    "headerSort": false
+}, {
+    "title": "G",
+    "field": "G",
+    "width": 60,
+    "align": "center",
+    "headerSort": false
+}, {
+    "title": "H",
+    "field": "H",
+    "width": 60,
+    "align": "center",
+    "headerSort": false
+}]
