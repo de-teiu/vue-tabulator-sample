@@ -61,23 +61,22 @@ import columns from "../assets/othello.json";
 import initialPlacement from "../assets/othello-init.json";
 /** 非同期通信ライブラリ */
 import axios from "axios";
+/** オセロ石反転用ロジック */
+import logic from "../assets/js/OthelloLogic.js";
 
 const Tabulator = require("tabulator-tables");
-const DISC_NONE = 0;
-const DISC_WHITE = 1;
-const DISC_BLACK = 2;
 
 export default {
   data() {
     return {
       /** tabulator制御用オブジェクト */
       tabulatorObject: null,
-      turn: DISC_BLACK
+      turn: logic.DISC_BLACK
     };
   },
   computed: {
     getTurnText() {
-      return (this.turn === DISC_WHITE ? "白" : "黒") + "の手番です。";
+      return (this.turn === logic.DISC_WHITE ? "白" : "黒") + "の手番です。";
     }
   },
   mounted() {
@@ -85,7 +84,7 @@ export default {
       cell
         .getElement()
         .classList.add(
-          cell.getValue() === DISC_WHITE ? "disc_white" : "disc_black"
+          cell.getValue() === logic.DISC_WHITE ? "disc_white" : "disc_black"
         );
 
       return cell.getValue() === 0 ? "　" : "●";
@@ -118,15 +117,28 @@ export default {
   },
   methods: {
     cellClick(e, cell) {
-      console.log(this.tabulatorObject.getRows());
       const stone = cell.getValue();
-      if (stone !== DISC_NONE) {
+      if (stone !== logic.DISC_NONE) {
         return;
+      }
+      const column = cell.getColumn().getField();
+      const row = cell.getRow().getPosition();
+      const updatedData = logic.update(
+        this.tabulatorObject.getData(),
+        row,
+        column,
+        this.turn
+      );
+      if (updatedData) {
+        //手番交代
+        this.turn =
+          this.turn === logic.DISC_WHITE ? logic.DISC_BLACK : logic.DISC_WHITE;
       }
     },
     moved(row) {
       //行入れ替え、列入れ替えをしたら手番交代とする
-      this.turn = this.turn === DISC_WHITE ? DISC_BLACK : DISC_WHITE;
+      this.turn =
+        this.turn === logic.DISC_WHITE ? logic.DISC_BLACK : logic.DISC_WHITE;
     }
   }
 };
