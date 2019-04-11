@@ -130,15 +130,15 @@ export default {
         this.turn
       );
       if (updatedData) {
+        //盤面更新
+        this.tabulatorObject.setData(updatedData);
         //手番交代
         this.turn =
           this.turn === logic.DISC_WHITE ? logic.DISC_BLACK : logic.DISC_WHITE;
       }
     },
     moved(row) {
-      //行入れ替え、列入れ替えをしたら手番交代とする
-      this.turn =
-        this.turn === logic.DISC_WHITE ? logic.DISC_BLACK : logic.DISC_WHITE;
+      //行入れ替え完了後処理
     }
   }
 };
