@@ -2,7 +2,7 @@
   <!-- tabulator実行箇所 -->
   <div ref="table"></div>
 </template>
-<style>
+<style scoped>
 /* tabulator用CSS */
 @import "~tabulator-tables/dist/css/tabulator.min.css";
 </style>
@@ -18,39 +18,30 @@ export default {
       columns: [
         {
           title: "Name",
-          field: "name",
-          editor: "input"
+          field: "name"
         },
         {
           title: "Task Progress",
           field: "progress",
           align: "left",
-          formatter: "progress",
-          editor: true
+          formatter: "progress"
         },
         {
           title: "Gender",
           field: "gender",
-          width: 95,
-          editor: "select",
-          editorParams: {
-            Male: "male",
-            Female: "female"
-          }
+          width: 95
         },
         {
           title: "Rating",
           field: "rating",
           formatter: "star",
           align: "center",
-          width: 100,
-          editor: true
+          width: 100
         },
         {
           title: "Color",
           field: "col",
-          width: 130,
-          editor: "input"
+          width: 130
         },
         {
           title: "Date Of Birth",
@@ -65,8 +56,7 @@ export default {
           width: 90,
           align: "center",
           formatter: "tickCross",
-          sorter: "boolean",
-          editor: true
+          sorter: "boolean"
         }
       ],
       /** 表示させるデータ */

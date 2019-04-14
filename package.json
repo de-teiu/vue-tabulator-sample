@@ -8,8 +8,10 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "ress": "^1.2.2",
     "tabulator-tables": "^4.2.3",
-    "vue": "^2.6.6"
+    "vue": "^2.6.6",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",

@@ -1,12 +1,13 @@
 <template>
   <div>
-    <!-- データを書き換えたり行追加したり選択行を削除したりファイルダウンロードしたり -->
+    <!-- 選択した行の中身を画面に表示させる -->
     <button v-on:click="search()">検索</button>
     <!-- tabulator実行箇所 -->
     <div ref="table"></div>
+    <div>{{selectedRowData}}</div>
   </div>
 </template>
-<style>
+<style scoped>
 /* tabulator用CSS */
 @import "~tabulator-tables/dist/css/tabulator.min.css";
 </style>
@@ -22,16 +23,22 @@ export default {
   data() {
     return {
       /** tabulator制御用オブジェクト */
-      tabulatorObject: null
+      tabulatorObject: null,
+      selectedRowData: null
     };
   },
   mounted() {
+    const vueObject = this;
     //ここでtabulatorの初期化
     this.tabulatorObject = new Tabulator(this.$refs.table, {
       data: [],
       columns: columns, //カラム定義はあらかじめimportしたjsonファイルから拾う
-      layout: "fitColumns",
-      selectable: 1 //数値を入れるとその値分だけ行選択できる. trueにすると何行でも一気に選択できる.
+      selectable: 1, //数値を入れるとその値分だけ行選択できる. trueにすると何行でも一気に選択できる.
+      rowSelected: function(row) {
+        //行選択時イベント
+        //選択した行を画面に表示する.
+        vueObject.selectedRowData = row.getData();
+      }
     });
   },
   methods: {
@@ -53,6 +60,9 @@ export default {
         .catch(error => {
           console.log(error);
         });
+    },
+    viewRowData(row) {
+      this.selectedRowData = row;
     }
   }
 };

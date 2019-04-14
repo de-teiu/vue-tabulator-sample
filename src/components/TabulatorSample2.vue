@@ -6,7 +6,7 @@
     <div ref="table"></div>
   </div>
 </template>
-<style>
+<style scoped>
 /* tabulator用CSS */
 @import "~tabulator-tables/dist/css/tabulator.min.css";
 </style>

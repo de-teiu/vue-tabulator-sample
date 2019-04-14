@@ -1,20 +1,15 @@
 <template>
   <div id="app">
-    <othello/>
+    <div id="nav">
+      <router-link to="/">Home</router-link>|
+      <router-link to="/Sample1">Sample1</router-link>|
+      <router-link to="/Sample2">Sample2</router-link>|
+      <router-link to="/Sample3">Sample3</router-link>|
+      <router-link to="/Othello">クソアプリ</router-link>|
+    </div>
+    <router-view/>
   </div>
 </template>
-
-<script>
-import TabulatorSample from "./components/TabulatorSample3.vue";
-import Othello from "./components/Othello.vue";
-
-export default {
-  name: "app",
-  components: {
-    Othello
-  }
-};
-</script>
 
 <style>
 </style>

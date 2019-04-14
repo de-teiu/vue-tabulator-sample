@@ -1,38 +1,29 @@
 [{
         "title": "Name",
-        "field": "name",
-        "editor": "input"
+        "field": "name"
     },
     {
         "title": "Task Progress",
         "field": "progress",
         "align": "left",
-        "formatter": "progress",
-        "editor": true
+        "formatter": "progress"
     },
     {
         "title": "Gender",
         "field": "gender",
-        "width": 95,
-        "editor": "select",
-        "editorParams": {
-            "Male": "male",
-            "Female": "female"
-        }
+        "width": 95
     },
     {
         "title": "Rating",
         "field": "rating",
         "formatter": "star",
         "align": "center",
-        "width": 100,
-        "editor": true
+        "width": 100
     },
     {
         "title": "Color",
         "field": "col",
-        "width": 130,
-        "editor": "input"
+        "width": 130
     },
     {
         "title": "Date Of Birth",
@@ -47,7 +38,6 @@
         "width": 90,
         "align": "center",
         "formatter": "tickCross",
-        "sorter": "boolean",
-        "editor": true
+        "sorter": "boolean"
     }
 ]
