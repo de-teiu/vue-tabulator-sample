@@ -22,35 +22,34 @@
 #table {
   width: 480px;
 }
-
-.tabulator .tabulator-col-title {
+#table >>> .tabulator .tabulator-col-title {
   text-align: center;
 }
 
-.tabulator-row.tabulator-row-even,
-.tabulator-row.tabulator-row-odd {
+#table >>> .tabulator-row.tabulator-row-even,
+#table >>> .tabulator-row.tabulator-row-odd {
   background-color: darkgreen;
 }
-.tabulator-row {
+#table >>> .tabulator-row {
   border-bottom: solid 2px black;
 }
-.tabulator-row .tabulator-cell {
+#table >>> .tabulator-row .tabulator-cell {
   padding: 8px 4px;
   border-right: solid 2px black;
   font-size: 2em;
 }
 
-.tabulator-row.tabulator-selectable:hover {
+#table >>> .tabulator-row.tabulator-selectable:hover {
   background-color: darkgreen;
 }
-.tabulator-cell:hover {
+#table >>> .tabulator-cell:hover {
   background-color: lightskyblue;
 }
 
-.disc_white {
+#table >>> .disc_white {
   color: white;
 }
-.disc_black {
+#table >>> .disc_black {
   color: black;
 }
 </style>
