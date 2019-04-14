@@ -2,7 +2,7 @@
   <div class="container">
     <!-- tabulator実行箇所 -->
     <div>
-      <div>{{getTurnText}}</div>
+      <div class="turn">{{getTurnText}}</div>
       <div ref="table" id="table"></div>
     </div>
   </div>
@@ -17,6 +17,14 @@
   justify-content: center;
 
   text-align: center;
+}
+
+.turn::first-letter {
+  font-size: 2em;
+  font-weight: bold;
+}
+.turn {
+  font-size: 1.5em;
 }
 
 #table {
@@ -102,7 +110,7 @@ export default {
       resizableRows: false,
       resizableColumns: false,
       movableRows: true,
-      movableColumns: true,
+      movableColumns: false,
       cellClick: (e, cell) => {
         this.cellClick(e, cell);
       },
