@@ -12,7 +12,7 @@
 </style>
 <script>
 /** カラム定義ファイル */
-import columns from "../assets/sample2columns.json";
+import columns from "../assets/sample4columns.json";
 /** 非同期通信ライブラリ */
 import axios from "axios";
 
@@ -29,17 +29,15 @@ export default {
     //ここでtabulatorの初期化
     this.tabulatorObject = new Tabulator(this.$refs.table, {
       data: [],
+      height: 400,
       columns: columns, //カラム定義はあらかじめimportしたjsonファイルから拾う
-      pagination: "local",
-      paginationSize: 5,
-      paginationSizeSelector: [5, 10],
       layout: "fitColumns"
     });
   },
   methods: {
     search() {
       axios
-        .get("/data/sample2.json")
+        .get("/data/sample4.json")
         .then(res => {
           this.tabulatorObject
             .setData(res.data)

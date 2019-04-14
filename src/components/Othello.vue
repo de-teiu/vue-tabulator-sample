@@ -116,9 +116,6 @@ export default {
       },
       rowMoved: row => {
         this.moved(row);
-      },
-      columnMoved: row => {
-        this.moved(row);
       }
     });
   },
@@ -146,6 +143,7 @@ export default {
     },
     moved(row) {
       //行入れ替え完了後処理
+      console.log(row);
     }
   }
 };

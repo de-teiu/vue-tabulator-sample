@@ -5,6 +5,7 @@ import Home from './views/Home.vue'
 import Sample1 from './views/Sample1.vue'
 import Sample2 from './views/Sample2.vue'
 import Sample3 from './views/Sample3.vue'
+import Sample4 from './views/Sample4.vue'
 
 import Othello from './views/Othello.vue'
 
@@ -30,6 +31,10 @@ export default new Router({
       path: '/sample3',
       name: 'sample3',
       component: Sample3
+    }, {
+      path: '/sample4',
+      name: 'sample4',
+      component: Sample4
     }, {
       path: '/othello',
       name: 'othello',

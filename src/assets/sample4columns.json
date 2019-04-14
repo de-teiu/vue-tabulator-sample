@@ -1,53 +1,42 @@
 [{
-        "title": "Name",
-        "field": "name",
-        "editor": "input"
+        "title": "ITEM_ID",
+        "field": "itemId",
+        "width": 100
     },
     {
-        "title": "Task Progress",
-        "field": "progress",
+        "title": "NAME",
+        "field": "itemName",
+        "width": 150,
         "align": "left",
-        "formatter": "progress",
         "editor": true
     },
     {
-        "title": "Gender",
-        "field": "gender",
-        "width": 95,
-        "editor": "select",
-        "editorParams": {
-            "Male": "male",
-            "Female": "female"
-        }
+        "title": "DESCRIPTION",
+        "field": "description",
+        "width": 400,
+        "editor": true
     },
     {
-        "title": "Rating",
-        "field": "rating",
-        "formatter": "star",
-        "align": "center",
+        "title": "PRICE",
+        "field": "price",
+        "formatter": "comma",
+        "align": "right",
         "width": 100,
-        "editor": true
+        "editor": "number"
     },
     {
-        "title": "Color",
-        "field": "col",
-        "width": 130,
+        "title": "TAX_RATE",
+        "field": "taxRate",
+        "formatter": "comma",
+        "align": "right",
+        "width": 120,
         "editor": "input"
     },
     {
-        "title": "Date Of Birth",
-        "field": "dob",
-        "width": 130,
-        "sorter": "date",
-        "align": "center"
-    },
-    {
-        "title": "Driver",
-        "field": "car",
-        "width": 90,
-        "align": "center",
-        "formatter": "tickCross",
-        "sorter": "boolean",
-        "editor": true
+        "title": "TAX",
+        "field": "tax",
+        "formatter": "comma",
+        "align": "right",
+        "width": 100
     }
 ]
