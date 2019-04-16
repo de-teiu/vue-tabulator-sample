@@ -3,41 +3,41 @@
     "itemName": "りんご",
     "description": "あかい",
     "price": 150,
-    "taxRate": 8,
+    "taxRate": 0.08,
     "tax": 12
 }, {
     "itemId": 2,
     "itemName": "みかん",
     "description": "うまい",
     "price": 50,
-    "taxRate": 8,
+    "taxRate": 0.08,
     "tax": 4
 }, {
     "itemId": 3,
     "itemName": "レモン",
     "description": "すっぱい",
     "price": 130,
-    "taxRate": 8,
+    "taxRate": 0.08,
     "tax": 10
 }, {
     "itemId": 4,
     "itemName": "バナナ",
     "description": "すべる",
     "price": 100,
-    "taxRate": 8,
+    "taxRate": 0.08,
     "tax": 8
 }, {
     "itemId": 5,
     "itemName": "スタープラチナ",
     "description": "桁外れのパワー、スピード、精密動作性を持つ",
     "price": 11193002,
-    "taxRate": 8,
+    "taxRate": 0.08,
     "tax": 895440
 }, {
     "itemId": 6,
     "itemName": "竹書房",
     "description": "東京都千代田区飯田橋2丁目7番3号",
     "price": 73600000,
-    "taxRate": 8,
+    "taxRate": 0.08,
     "tax": 5888000
 }]

@@ -19,7 +19,12 @@
     {
         "title": "PRICE",
         "field": "price",
-        "formatter": "comma",
+        "formatter": "money",
+        "formatterParams": {
+            "decimal": ",",
+            "symbol": "&yen",
+            "precision": false
+        },
         "align": "right",
         "width": 100,
         "editor": "number"
@@ -27,7 +32,11 @@
     {
         "title": "TAX_RATE",
         "field": "taxRate",
-        "formatter": "comma",
+        "formatter": "money",
+        "formatterParams": {
+            "decimal": ".",
+            "precision": 3
+        },
         "align": "right",
         "width": 120,
         "editor": "input"
@@ -35,7 +44,12 @@
     {
         "title": "TAX",
         "field": "tax",
-        "formatter": "comma",
+        "formatter": "money",
+        "formatterParams": {
+            "decimal": ",",
+            "symbol": "&yen",
+            "precision": false
+        },
         "align": "right",
         "width": 100
     }
